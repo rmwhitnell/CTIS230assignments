@@ -1,0 +1,122 @@
+body {
+    color: black;
+    background-color: floralwhite;
+    font-family: Garamond, Didot, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+header {
+    display: flex;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+/*    border: 1px solid brown;*/
+    background-color: wheat;
+}
+
+div.nav {
+    width: 30%;
+/*    border: 2px dotted black;*/
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Gill Sans", sans-serif !important;
+}
+
+div.nav a {
+    text-decoration: none !important;
+    font-family: "Gill Sans", sans-serif !important;
+
+}
+
+a {
+    font-family: Didot, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+}
+
+div#info {
+    text-align: right;
+}
+
+div#address {
+    font-size: 1.2em;
+}
+
+table.experience {
+    width: 100%;
+}
+
+td.position {
+    width: 30%;
+}
+
+td.location {
+    width: 40%;
+    text-align: center;
+}
+
+td.date {
+    width: 30%;
+    text-align: right;
+}
+
+p.resdesc {
+    margin-left: 1%;
+}
+
+h1, h2 {
+    color: darkred;
+    font-family: "Gill Sans", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    width: fit-content;
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ul li {
+    margin-bottom: 0.4em;
+}
+
+ol li {
+    margin-bottom: 0.8em;
+}
+
+img#publication {
+    vertical-align: middle;
+    width: 10%;
+}
+
+img#jce1994 {
+    float: right;
+    margin: 1em;
+}
+
+.courses {
+    display: flex;
+    /*    flex-direction: column;*/
+    flex-wrap: wrap;
+    /*  width: 80%;*/
+    margin-left: 10%;
+    margin-right: 10%;
+    /* border: 2px solid black;*/
+}
+
+.course {
+    width: 20%;
+    margin-right: 4%;
+    margin-bottom: 0.8em;
+    /* border: 2px dotted black;*/
+    vertical-align: middle;
+}
+
+.course#title {
+    width: 100%;
+    text-align: center;
+}
