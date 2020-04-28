@@ -6,7 +6,7 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     border: 2px solid brown;
-    padding: 0.2em;
+    padding: 0.5em;
 }
 
 header {
@@ -43,6 +43,11 @@ div#info {
 
 div#address {
     font-size: 1.2em;
+}
+
+span#addresstext {
+    display:table;
+    text-align:right;
 }
 
 table.experience {
@@ -84,10 +89,12 @@ ul {
 
 ul li {
     margin-bottom: 0.4em;
+    line-height: 1.3;
 }
 
 ol li {
     margin-bottom: 0.8em;
+    line-height: 1.3;
 }
 
 img#publication { /*id selector on img tag for publication*/
