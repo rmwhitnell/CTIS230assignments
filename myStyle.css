@@ -22,13 +22,13 @@ div.nav { /*block elements*/
     width: 30%;
 /*    border: 2px dotted black;*/
     text-align: center;
-    font-size: 1.5em;
-    font-family: "Gill Sans", sans-serif !important;
+    font-size: 2.5vw;
+    font-family: "Gill Sans", "Gill Sans MT", sans-serif !important;
 }
 
 div.nav a {
     text-decoration: none !important;
-    font-family: "Gill Sans", sans-serif !important;
+    font-family: "Gill Sans", "Gill Sans MT", sans-serif !important;
 
 }
 
@@ -116,6 +116,7 @@ ol li.float { /* float specified list elements */
     width: 20%; /*need to specify width when floating text content*/
     background-color: lavender;
     margin-right: 2em;
+    padding: 0.3em;
 }
 
 .courses {

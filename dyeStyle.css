@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+section {
+  background-color:lightgray;
+  margin-left:20%;
+  margin-right:20%;
+}
+
+header {
+  background-color: khaki;
+  height: 250px;
+  margin-bottom: 20px;
+  background-image: url(images/carbocyaninedyes.png);
+  background-size: cover;
+  position:relative;
+  
+}
+
+div#title {
+    font-family: "Fjalla One", Tahoma, serif;
+    font-size:2em;
+    color: maroon;
+    background-color: rgba(200,200,200,0.5);
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+div.navbar {
+  display: flex;
+  border: 1px solid brown;
+  padding: 0.5em;
+  justify-content: space-between;
+ }
+
+div.nav {
+  font-family: "Roboto Slab", "Gill Sans MT", sans-serif;
+  font-size: 2.5vw;
+  text-align:center;
+  border: 2px dotted green;
+  width: calc(50% - 20px);
+  background-color: orange;
+  padding-top:0.5em;
+}
+
+img.dip {
+    width: 40%;
+    margin-top: 1em;
+}
+
+img#emblem {
+    position: absolute;
+    width: 150px;
+    right: 10px;
+    bottom: 10px;
+    
+    background-color: rgba(200,200,200,0.5);
+}
