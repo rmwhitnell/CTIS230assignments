@@ -1,3 +1,4 @@
+/* always import fonts at the top of your style sheet*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
@@ -22,7 +23,8 @@ div#title {
     font-size:2em;
     color: maroon;
     background-color: rgba(200,200,200,0.5);
-    position: absolute;
+    position: absolute; /* because the containing element is relative, this position is absolute with respect to that element, 
+    not the viewport*/
     top: 25px;
     left: 30px;
 }
@@ -36,7 +38,7 @@ div.navbar {
 
 div.nav {
   font-family: "Roboto Slab", "Gill Sans MT", sans-serif;
-  font-size: 2.5vw;
+  font-size: 2.5vw; /* units of viewport width; the font size will change as the viewport scales */
   text-align:center;
   border: 2px dotted green;
   width: calc(50% - 20px);
