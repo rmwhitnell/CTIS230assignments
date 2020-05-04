@@ -7,6 +7,7 @@ ourButton = document.getElementById("mybutton");
 theTextInput = document.getElementById("myinput");
 theImgDiv = document.getElementById("card");
 theImage = document.getElementById("cardimage");
+theBigImage = document.getElementById("largeview");
 
 // Each page is called "document"--we want to ask document to do something. That something is get the HTML node with the id "text"
 // Then, we'll give that element the name "ourText"
@@ -18,11 +19,25 @@ ourText.addEventListener("mouseout", onMouseOut);
 ourButton.addEventListener("click", onClick);
 theTextInput.addEventListener("blur", changeText); //blur is when the textfield loses focus; user clicks or tabs out of it
 theTextInput.addEventListener("change", changeText); //change is when user hits enter
-theImgDiv.addEventListener("click", expandImage);
+theImgDiv.addEventListener("click", makeBigImage);
+theBigImage.addEventListener("click", hideBigImage);
 
 // We've now told ourText that it should use an event listener named onMouseOver whenever the mouseover event occurs--Table 21-2, pg. 614
 
 // Step 3: Write the event listener
+
+function hideBigImage() {
+    theBigImage.classList.add("dontshow"); //tell theBigImage that it's part of the dontshow class
+    theBigImage.innerHTML = "";
+}
+
+function makeBigImage() {
+    // make a new img element to add to our section element
+    bigimage = document.createElement("img");
+    bigimage.src = "2_of_clubs.png";
+    theBigImage.appendChild(bigimage); //add the img element to the section
+    theBigImage.classList.remove("dontshow"); //tell the section that it's no longer part of the dontshow class
+}
 
 function expandImage() {
     if (theImgDiv.style.position == "") {// if the div has its original value of position

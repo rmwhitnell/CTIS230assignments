@@ -25,3 +25,17 @@ body {
       width: fit-content;
       border: 2px solid green;
   }
+
+  section#largeview {
+    position:fixed;
+    top: 100px;
+    left: 500px;
+  }
+
+  section#largeview.dontshow{
+    display:none;
+  }
+
+  section#largeview img {
+    width:auto;
+  }
