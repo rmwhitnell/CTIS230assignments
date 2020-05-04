@@ -9,6 +9,26 @@ body {
     padding: 0.5em;
 }
 
+/* Use media query to ask how big the viewport is */
+@media (max-width: 750px) { /* these rules take effect when the viewport is small */
+    body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    ol li.float {
+        float: none;
+        width: auto;
+        margin-right: auto;
+        background-color: lavender;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        background-color: lightcyan;
+    }
+}
+
 header {
     display: flex;
     height: 5em;
@@ -111,12 +131,14 @@ img#jce1994 { /* floats the img with the id jce1994 to the right with a margin*/
     margin: 1em;
 }
 
+@media (min-width: 750px) { /* only do this if the viewport is large enough*/
 ol li.float { /* float specified list elements */
     float: left;
     width: 20%; /*need to specify width when floating text content*/
     background-color: lavender;
     margin-right: 2em;
     padding: 0.3em;
+}
 }
 
 .courses {
@@ -135,6 +157,16 @@ ol li.float { /* float specified list elements */
     margin-bottom: 0.8em;
     /* border: 2px dotted black;*/
     vertical-align: middle;
+}
+
+@media (max-width: 750px) {
+    .courses {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .course {
+        font-size: 0.7em;
+    }
 }
 
 .course#title {

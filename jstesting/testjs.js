@@ -27,8 +27,8 @@ theImgDiv.addEventListener("click", expandImage);
 function expandImage() {
     if (theImgDiv.style.position == "") {// if the div has its original value of position
         theImgDiv.style.position = "absolute";
-        theImgDiv.style.top = "100";
-        theImgDiv.style.left = "100";
+        theImgDiv.style.top = "300";
+        theImgDiv.style.left = "300";
         theImage.style.width = "auto";
         theImage.src = "2_of_diamonds.png";
     } // auto means what this width property would do if there was not a stylesheet
