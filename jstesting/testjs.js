@@ -8,6 +8,8 @@ theTextInput = document.getElementById("myinput");
 theImgDiv = document.getElementById("card");
 theImage = document.getElementById("cardimage");
 theBigImage = document.getElementById("largeview");
+cardShown = false;
+
 
 // Each page is called "document"--we want to ask document to do something. That something is get the HTML node with the id "text"
 // Then, we'll give that element the name "ourText"
@@ -21,10 +23,17 @@ theTextInput.addEventListener("blur", changeText); //blur is when the textfield 
 theTextInput.addEventListener("change", changeText); //change is when user hits enter
 theImgDiv.addEventListener("click", makeBigImage);
 theBigImage.addEventListener("click", hideBigImage);
+theBigImage.innerHTML = "";
+document.addEventListener("keyup", onKeyUp);
 
 // We've now told ourText that it should use an event listener named onMouseOver whenever the mouseover event occurs--Table 21-2, pg. 614
 
 // Step 3: Write the event listener
+
+function onKeyUp(event) {
+    hideBigImage();
+    console.log("key released is " + event.code);
+}
 
 function hideBigImage() {
     theBigImage.classList.add("dontshow"); //tell theBigImage that it's part of the dontshow class
@@ -33,10 +42,12 @@ function hideBigImage() {
 
 function makeBigImage() {
     // make a new img element to add to our section element
-    bigimage = document.createElement("img");
-    bigimage.src = "2_of_clubs.png";
-    theBigImage.appendChild(bigimage); //add the img element to the section
-    theBigImage.classList.remove("dontshow"); //tell the section that it's no longer part of the dontshow class
+    if (theBigImage.innerHTML == "") {
+        bigimage = document.createElement("img");
+        bigimage.src = "2_of_clubs.png";
+        theBigImage.appendChild(bigimage); //add the img element to the section
+        theBigImage.classList.remove("dontshow"); //tell the section that it's no longer part of the dontshow class
+    }
 }
 
 function expandImage() {
@@ -62,8 +73,16 @@ function changeText() {
 }
 
 function onClick() {
-    theImgDiv.style.display = "block";
-    ourText.innerHTML = "I clicked the button";
+    if (cardShown == false) {
+        theImgDiv.style.display = "block";
+        ourText.innerHTML = "I clicked the button";
+        cardShown = true;
+    } else {
+        theImgDiv.style.display = "none";
+        ourText.innerHTML = "<em>Stopped showing the card</em>"
+        cardShown = false;
+    }
+    
 }
 
 function onMouseOut() {
