@@ -7,13 +7,17 @@ body {
     margin-right: 15%;
     border: 2px solid brown;
     padding: 0.5em;
+    transition-property: all;
+    transition-duration: 1s;
+    
 }
 
 /* Use media query to ask how big the viewport is */
 @media (max-width: 750px) { /* these rules take effect when the viewport is small */
     body {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 0.9em;
     }
     ol li.float {
         float: none;
@@ -55,7 +59,18 @@ div.nav a {
 a {
     font-family: Garamond, Didot, Georgia, 'Times New Roman', Times, serif !important;
     font-size: 1.1em;
+    color: royalblue;
+    text-decoration:none;
+    border-bottom: 2px solid transparent;
+    transition-property: border-bottom;
+    transition-duration: 0.5s;
 }
+
+a:hover {
+    /*text-decoration: underline;*/
+    border-bottom: 2px solid royalblue;
+}
+
 
 div#info {
     text-align: right;
@@ -63,6 +78,7 @@ div#info {
 
 div#address {
     font-size: 1.2em;
+    transform: scale(1.5, 0.5) translateX(-200px);
 }
 
 span#addresstext {
@@ -119,16 +135,22 @@ ol li {
 
 img#publication { /*id selector on img tag for publication*/
     vertical-align: middle;
+    position:relative;
+    top: 0px;
     width: 10%;
+    transition-property: width top;
+    transition-duration: 0.75s;
 }
 
 img#publication:hover { /*pseudo-class selector on an id selector*/
-    width:auto;
+    width:50%;
+    top: -300px;
 }
 
 img#jce1994 { /* floats the img with the id jce1994 to the right with a margin*/
     float: right;
     margin: 1em;
+    transform: rotate(0.05turn) scale(0.8);
 }
 
 @media (min-width: 750px) { /* only do this if the viewport is large enough*/
