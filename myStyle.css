@@ -12,6 +12,26 @@ body {
     
 }
 
+div#uc {
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    left: 275px;
+    transition-property: visibility;
+    transition-duration: 1s;
+}
+
+iframe#ucmapframe {
+    opacity: 0;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.76);
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+div#uctext, div#reedtext {
+    margin-bottom: 0.4em;
+}
+
 /* Use media query to ask how big the viewport is */
 @media (max-width: 750px) { /* these rules take effect when the viewport is small */
     body {
@@ -78,7 +98,7 @@ div#info {
 
 div#address {
     font-size: 1.2em;
-    transform: scale(1.5, 0.5) translateX(-200px);
+    /*transform: scale(1.5, 0.5) translateX(-200px);*/
 }
 
 span#addresstext {
