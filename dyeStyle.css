@@ -101,7 +101,7 @@ img#emblem {
 
 
 
-@media screen and (max-height: 24em) {
+@media screen and (max-height: 24em) { /* instead of px, use em as units; em is relative to font-size--12-16px*/
   /* these rules take effect when the viewport is small in height--landscape on phone */
   body {
     margin-left: 2%;
